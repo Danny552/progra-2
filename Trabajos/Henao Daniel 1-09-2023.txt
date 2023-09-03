@@ -1,0 +1,165 @@
+#include <stdio.h>
+
+int main()
+{
+    int pmo1, pmo2 = 0;
+    int p;
+    int a, b, n = 0;
+    int num, mayor = 0;
+    int menor = 432123;
+    int cp, ci = 0;
+    int suma = 0;
+    int i = 0;
+    int r, sum = 0;
+    int opc;
+    printf("Ingrese la opción");
+    scanf("%d", &opc);
+    switch (opc)
+    {
+    case 1:
+        printf("Ingrese un número");
+        scanf("%d", &n);
+        while (n > 0)
+        {
+            r = n % 10;
+            n = n / 10;
+            if (r % 2 == 0)
+            {
+                sum = sum + r;
+            }
+        }
+        printf("%d", sum);
+        break;
+    case 2:
+        a = 1;
+        b = 2;
+        printf("Inserte la cantidad de números que desee mostrar: ");
+        scanf("%d", &n);
+        while (i != n)
+        {
+            if (i % 2 == 1)
+            {
+                printf("%d, ", b);
+                suma = suma + b;
+                b = b + 2;
+            }
+            else
+            {
+                printf("%d, ", a);
+                suma = suma + a;
+                a++;
+            }
+            i++;
+        }
+        printf("\nLa suma de los términos es: %d", suma);
+
+        break;
+    case 3:
+        printf("Ingrese una serie de números hasta poner un número negativo: ");
+        while (num > 0)
+        {
+            scanf("%d", &num);
+            if (num % 2 == 0)
+            {
+                if (num > mayor)
+                {
+                    mayor = num;
+                    cp++;
+                }
+            }
+            else if (num < menor)
+            {
+                if (num < 0)
+                {
+                }
+                else
+                {
+                    menor = num;
+                    ci++;
+                }
+            }
+        }
+        if (cp == 0 && ci == 0)
+        {
+            printf("No ingresó ningún valor");
+        }
+        else if (cp < 0)
+        {
+            printf("No ingresó ningún par");
+        }
+        else if (ci < 0)
+        {
+            printf("No ingresó ningún impar");
+        }
+        else
+        {
+            printf("Mayor par: %d, Menor impar: %d", mayor, menor);
+        }
+        break;
+    case 4:
+        printf("ingrese dos números primos para empezar la serie: ");
+        scanf("%d %d", &a, &b);
+        printf("Ingrese la cantidad de número que desee ver en la sucesión: ");
+        scanf("%d", &n);
+        i = 1;
+        p = 0;
+        while (i <= a)
+        {
+            if ((a % i) == 0)
+            {
+                p++;
+            };
+            i++;
+        };
+        if (p == 2)
+        {
+            pmo1 = 1;
+        }
+        else
+        {
+            pmo2 = 0;
+        }
+        i = 1;
+        p = 0;
+        while (i <= b)
+        {
+            if ((b % i) == 0)
+            {
+                p++;
+            };
+            i++;
+        };
+        if (p == 2)
+        {
+            pmo2 = 1;
+        }
+        else
+        {
+            pmo2 = 0;
+        }
+        if (pmo1 == 1 && pmo2 == 1)
+        {
+            i = 0;
+            while (i < n)
+            {
+                printf("%d, ", a);
+                a = b;
+                b = a + b;
+                i++;
+            }
+        }
+        else if (pmo1 == 0 && pmo2 == 0)
+        {
+            printf("Ninguno de los dos es primo!");
+        }
+        else if (pmo1 == 0)
+        {
+            printf("El primero no es primo");
+        }
+        else if (pmo2 == 0)
+        {
+            printf("Alguno no es primo");
+        }
+        break;
+    }
+}
