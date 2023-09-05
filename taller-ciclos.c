@@ -1,3 +1,5 @@
+// Daniel Alejandro Henao 
+// Taller Ciclos 4/09/2023
 #include <stdio.h>
 #include <math.h>
 
