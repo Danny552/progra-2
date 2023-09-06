@@ -172,5 +172,5 @@ int main()
                i++;
           }
           break;
-     }
+        }
 }
