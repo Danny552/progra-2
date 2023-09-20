@@ -1,3 +1,6 @@
+//Daniel Alejandro Henao
+//4-09-2023 TALLER EN CLASE
+
 #include <stdio.h>
 #include <stdlib.h>
 
