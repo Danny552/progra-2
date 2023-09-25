@@ -1,11 +1,10 @@
 #include <stdio.h>
 int main()
 {
-    int n, m;
+    int n, m, array1[100], array2[100], array1_2[100];
     int i = 1;
     printf("Ingrese el tamaño del primer array: ");
     scanf("%d", &n);
-    int array1[n];
     printf("Ingrese el primer array:\n");
     for (i = 1; i <= n; i++)
     {
@@ -14,7 +13,6 @@ int main()
     }
     printf("Ingrese el tamaño del segundo array: ");
     scanf("%d", &m);
-    int array2[m];
     printf("Ingrese el segundo array:\n");
     for (i = 1; i <= m; i++)
     {
@@ -23,7 +21,6 @@ int main()
     }
     i = 1;
     int z = n + m;
-    int array1_2[z];
     for (i = 1; i <= n; i++)
     {
         array1_2[i] = array1[i];
