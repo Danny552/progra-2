@@ -65,10 +65,10 @@ int main(){
     break;
     case 3:
 
-    for (int i = 0; i < 10; i++) { // Tamaño de U
-        int encontrado = 0; // Indica si el elemento U[i] se encuentra en X.
+    for (int i = 0; i < 10; i++) {
+        int encontrado = 0;
         
-        for (int j = 0; j < 6; j++) { // Tamaño de X
+        for (int j = 0; j < 6; j++) {
             if (U[i] == X[j]) {
                 encontrado = 1;
                 break;
